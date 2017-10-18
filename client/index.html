@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	</head>
+	<body ng-app="monmodule">
+		<p class="red">hello world</p>
+		<div ng-controller="ctrl1">
+			{{test}}
+			<ul>
+				<li ng-repeat="n in response">
+					{{n.value1}}, created By {{n.createdBy}}
+				</li>
+			</ul>
+			<table style="width:100%">
+				<tr>
+					<th>valeur</th>
+					<th>createdBy</th>
+					<th>createdAt</th>
+				</tr>
+				<tr ng-repeat="n in response">
+					<td>{{n.value1}}</td>
+					<td>{{n.createdBy}}</td>
+					<td>{{n.createdAt}}</td>
+				</tr>
+				
+			</table>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="/static/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/static/js/monscript.js"></script>
+</html>

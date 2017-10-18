@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>socket example</title>
+		<script type="text/javascript" src="/static/lib/socket.io-client/dist/socket.io.js"></script>
+	</head>
+	<body>
+		hello socket
+		<span id="bind"></span>
+
+
+		<script type="text/javascript">
+		var socket = io.connect('http://localhost:3002');
+		
+		socket.on("monsocket",function(socket){
+		console.log(socket);
+		var span = document.getElementById('bind');
+		span.innerHTML = socket.hello;
+		});
+		</script>
+	</body>
+</html>
